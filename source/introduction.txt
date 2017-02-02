@@ -19,16 +19,26 @@ We will now explain each line of the example.
 
 .. literalinclude:: ../examples/simple_example.js
     :lines: 1
+    :linenos:
+    :lineno-start: 1
 
 We start the program with a `shebang-directive <https://en.wikipedia.org/wiki/Shebang_(Unix)>`_, 
 which tells the operating system what interpreter to use to execute the file. This is strictly 
 speaking not necessary, but makes it possible to launch the program directly, just as with 
 native executables on the system. Most commonly, gjs should
 be available in /usr/bin/gjs, but this could be different for your system. If gjs
-is available in your path, you can find its precise location by executing "which gjs".
+is available in your path, you can run
+
+.. code-block:: bash
+
+    which gjs
+
+to find its precise location.
 
 .. literalinclude:: ../examples/simple_example.js
     :lines: 3
+    :linenos:
+    :lineno-start: 3
 
 We start by importing the Gtk library. This is done through Gjs' imports statement.
 Gtk is one of the libraries that make use of GObject introspection, and is therefore 
@@ -36,8 +46,52 @@ listed under the gi collection.
 
 .. literalinclude:: ../examples/simple_example.js
     :lines: 4
+    :linenos:
+    :lineno-start: 4
 
 After we have imported Gtk, we must initialize it. 
 The init function takes as its argument a list of strings, the command line options passed to your program.
 It is, however, ok to pass null to Gtk.init if commandline handling is not required. A failure to initialize
 the Gtk library can lead to your program terminating unexpectedly with a segmentation fault. 
+
+
+.. literalinclude:: ../examples/simple_example.js
+    :lines: 6
+    :linenos:
+    :lineno-start: 6
+
+This statement creates an empty window. 
+
+.. literalinclude:: ../examples/simple_example.js
+    :lines: 7
+    :linenos:
+    :lineno-start: 7
+
+Closing the window does not automatically terminate the application. 
+In order to do that, we connect to the window's delete event, and
+makes it run Gtk.main_quit to quit Gtk's event loop when the window is closed.
+
+.. literalinclude:: ../examples/simple_example.js
+    :lines: 8
+    :linenos:
+    :lineno-start: 8
+
+We now display the window.
+
+.. literalinclude:: ../examples/simple_example.js
+    :lines: 9
+    :linenos:
+    :lineno-start: 9
+
+Finally, we start the Gtk event loop. You can now run the program by making it executable and running it 
+
+.. code-block:: bash
+
+    chmod +x simple_example.js
+    ./simple_example.js
+
+or by running it with gjs 
+
+.. code-block:: bash
+
+    gjs simple_example.js
