@@ -14,6 +14,7 @@ Note that the appearance of the window will depend on your current GNOME theme.
 
 .. literalinclude:: ../examples/simple_example.js
     :linenos:
+    :language: javascript
 
 We will now explain each line of the example.
 
@@ -21,6 +22,7 @@ We will now explain each line of the example.
     :lines: 1
     :linenos:
     :lineno-start: 1
+    :language: javascript
 
 We start the program with a `shebang-directive <https://en.wikipedia.org/wiki/Shebang_(Unix)>`_, 
 which tells the operating system what interpreter to use to execute the file. This is strictly 
@@ -39,6 +41,7 @@ to find its precise location.
     :lines: 3
     :linenos:
     :lineno-start: 3
+    :language: javascript
 
 We start by importing the Gtk library. This is done through Gjs' imports statement.
 Gtk is one of the libraries that make use of GObject introspection, and is therefore 
@@ -48,6 +51,7 @@ listed under the gi collection.
     :lines: 4
     :linenos:
     :lineno-start: 4
+    :language: javascript
 
 After we have imported Gtk, we must initialize it. 
 The init function takes as its argument a list of strings, the command line options passed to your program.
@@ -59,6 +63,7 @@ the Gtk library can lead to your program terminating unexpectedly with a segment
     :lines: 6
     :linenos:
     :lineno-start: 6
+    :language: javascript
 
 This statement creates an empty window. 
 
@@ -66,6 +71,7 @@ This statement creates an empty window.
     :lines: 7
     :linenos:
     :lineno-start: 7
+    :language: javascript
 
 Closing the window does not automatically terminate the application. 
 In order to do that, we connect to the window's delete event, and
@@ -75,6 +81,7 @@ makes it run Gtk.main_quit to quit Gtk's event loop when the window is closed.
     :lines: 8
     :linenos:
     :lineno-start: 8
+    :language: javascript
 
 We now display the window.
 
@@ -82,6 +89,7 @@ We now display the window.
     :lines: 9
     :linenos:
     :lineno-start: 9
+    :language: javascript
 
 Finally, we start the Gtk event loop. You can now run the program by making it executable and running it 
 
@@ -105,3 +113,4 @@ We now turn to something a bit more complex, the GUI version of the classic "Hel
 
 .. literalinclude:: ../examples/extended_example.js 
     :linenos:
+    :language: javascript
