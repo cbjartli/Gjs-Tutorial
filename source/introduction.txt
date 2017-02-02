@@ -1,0 +1,31 @@
+.. _introduction:
+
+Getting Started
+===============
+
+Simple Example
+--------------
+
+To start with our tutorial we create the simplest program possible.
+This program will create an empty 200 x 200 pixel window. 
+Note that the appearance of the window will depend on your current GNOME theme. 
+
+.. image:: ../images/simple_example.png
+
+.. literalinclude:: ../examples/simple_example.js
+    :linenos:
+
+We will now explain each line of the example.
+
+.. literalinclude:: ../examples/simple_example.js
+    :lines: 1
+
+We start the program with a `shebang-directive <https://en.wikipedia.org/wiki/Shebang_(Unix)>`_, 
+which tells the operating system what interpreter to use to execute the file. Most commonly, gjs should
+be available in /usr/bin/gjs, but this could be different for your system. If gjs
+is available in your path, you can find its precise location by executing "which gjs".
+
+.. literalinclude:: ../examples/simple_example.js
+    :lines: 3-4
+
+
