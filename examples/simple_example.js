@@ -1,9 +1,6 @@
 #!/usr/bin/gjs
 
 const Gtk = imports.gi.Gtk;
-print(Gtk);
-const Lang = imports.lang;
-
 Gtk.init(null, 0);
 
 let win = new Gtk.Window();
