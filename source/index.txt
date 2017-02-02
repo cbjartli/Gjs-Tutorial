@@ -10,9 +10,11 @@
 Gjs/GTK+ 3 Tutorial
 ===================
 
-This tutorial gives an introduction to writing GTK+ 3 applications with Gjs.
+This tutorial gives an introduction to writing GTK+ 3 applications with Gjs. 
+It has been written based on a `similar tutorial <https://python-gtk-3-tutorial.readthedocs.io>`_ written for GTK+ 3 development
+in Python.
 
-This tutorial presumes some experience with the JavaScript progamming language, 
+This tutorial presumes some experience with the JavaScript programming language, 
 as well as some knowledge of concepts from object oriented programming. 
 
 Although this tutorial describes the most important classes and methods within
@@ -25,7 +27,7 @@ detailed description of the API.
    :maxdepth: 2
    :caption: Contents:
     
-
+   introduction
 
 Indices and tables
 ==================
