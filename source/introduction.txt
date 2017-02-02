@@ -95,3 +95,13 @@ or by running it with gjs
 .. code-block:: bash
 
     gjs simple_example.js
+
+
+Extended Example 
+----------------
+We now turn to something a bit more complex, the GUI version of the classic "Hello World" program. 
+
+.. image :: ../images/extended_example.png
+
+.. literalinclude:: ../examples/extended_example.js 
+    :linenos:
