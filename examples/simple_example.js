@@ -1,7 +1,7 @@
 #!/usr/bin/gjs
 
 const Gtk = imports.gi.Gtk;
-Gtk.init(null, 0);
+Gtk.init(null);
 
 let win = new Gtk.Window();
 win.connect("delete-event", Gtk.main_quit);

@@ -21,11 +21,23 @@ We will now explain each line of the example.
     :lines: 1
 
 We start the program with a `shebang-directive <https://en.wikipedia.org/wiki/Shebang_(Unix)>`_, 
-which tells the operating system what interpreter to use to execute the file. Most commonly, gjs should
+which tells the operating system what interpreter to use to execute the file. This is strictly 
+speaking not necessary, but makes it possible to launch the program directly, just as with 
+native executables on the system. Most commonly, gjs should
 be available in /usr/bin/gjs, but this could be different for your system. If gjs
 is available in your path, you can find its precise location by executing "which gjs".
 
 .. literalinclude:: ../examples/simple_example.js
-    :lines: 3-4
+    :lines: 3
 
+We start by importing the Gtk library. This is done through Gjs' imports statement.
+Gtk is one of the libraries that make use of GObject introspection, and is therefore 
+listed under the gi collection. 
 
+.. literalinclude:: ../examples/simple_example.js
+    :lines: 4
+
+After we have imported Gtk, we must initialize it. 
+The init function takes as its argument a list of strings, the command line options passed to your program.
+It is, however, ok to pass null to Gtk.init if commandline handling is not required. A failure to initialize
+the Gtk library can lead to your program terminating unexpectedly with a segmentation fault. 
