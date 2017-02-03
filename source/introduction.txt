@@ -95,7 +95,7 @@ For something a little more useful, here’s the Gjs version of the classic “H
 .. literalinclude:: ../examples/extended_example.js 
     :linenos:
 
-This example differs from the simple example as we sub-class :class: `Gtk.Window` to define our own :class: `MyWindow` class.
+This example differs from the simple example as we sub-class :class:`Gtk.Window` to define our own :class:`MyWindow` class.
 
 In order to do this, we import the lang library, which contains some convenience functions for writing object oriented javascript.
 
@@ -111,7 +111,7 @@ We can then define the class using Lang.Class
     :linenos:
     :lineno-start: 8
 
-In the class’s constructor we have to call the constructor of the super class. In addition, we tell it to set the value of the property title to Hello World.
+In the class’s constructor we have to call the constructor of the parent class. In addition, we tell it to set the value of the property title to Hello World.
 
 .. literalinclude:: ../examples/extended_example.js
     :lines: 13
@@ -125,11 +125,11 @@ The next three lines are used to create a button widget, connect to its clicked 
     :linenos:
     :lineno-start: 14
 
-Accordingly, the method  `onButtonClicked` will be called if you click on the button.
+Accordingly, the method :meth:`onButtonClicked` will be called if you click on the button.
 
 .. literalinclude:: ../examples/extended_example.js
     :lines: 19-21
     :linenos:
     :lineno-start: 19
 
-The last block, outside of the class, is very similar to the simple example above, but instead of creating an instance of the generic :class: `Gtk.Window` class, we create an instance of :class: `MyWindow`.
+The last block, outside of the class, is very similar to the simple example above, but instead of creating an instance of the generic :class:`Gtk.Window` class, we create an instance of :class:`MyWindow`.
