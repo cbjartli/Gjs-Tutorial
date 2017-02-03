@@ -66,3 +66,27 @@ Subsequently, we add two different buttons to the box container.
 
 While with :meth:`Gtk.Box.pack_start` widgets are positioned from left to right,
 :meth:`Gtk.Box.pack_end` positions them from right to left.
+
+
+.. _layout-grid:
+
+Grid
+----
+:class:`Gtk.Grid` is a container which arranges its child widgets in rows and
+columns, but you do not need to specify the dimensions in the constructor.
+Children are added using :meth:`Gtk.Grid.attach`. They can span multiple rows or
+columns. It is also possible to add a child next to an existing child, using
+:meth:`Gtk.Grid.attach_next_to`.
+
+:class:`Gtk.Grid` can be used like a :class:`Gtk.Box` by just using
+:meth:`Gtk.Grid.add`, which will place children next to each other in the
+direction determined by the "orientation" property (defaults to
+:attr:`Gtk.Orientation.HORIZONTAL`).
+
+Example
+^^^^^^^
+
+.. image:: ../images/layout_grid_example.png
+
+.. literalinclude:: ../examples/layout_grid_example.js
+    :linenos:
