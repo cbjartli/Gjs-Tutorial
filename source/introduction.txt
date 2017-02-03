@@ -17,32 +17,31 @@ Note that the appearance of the window will depend on your current GNOME theme.
 
 We will now explain each line of the example.
 
-.. literalinclude:: ../examples/simple_example.js
-    :lines: 1
-    :linenos:
-    :lineno-start: 1
-
 We start the program with a `shebang-directive <https://en.wikipedia.org/wiki/Shebang_(Unix)>`_, 
 which tells the operating system what interpreter to use to execute the file. \
 
 .. literalinclude:: ../examples/simple_example.js
-    :lines: 3
+    :lines: 1
     :linenos:
-    :lineno-start: 3
+    :lineno-start: 1
 
 In the beginning, we have to import the Gtk module to be able to access GTK+’s classes and functions.
 Gtk is one of the libraries that make use of GObject introspection, and is therefore 
 listed under the gi collection. 
 
 .. literalinclude:: ../examples/simple_example.js
-    :lines: 4
+    :lines: 3
     :linenos:
-    :lineno-start: 4
+    :lineno-start: 3
 
 After we have imported Gtk, we must initialize it. 
 The init function takes as its argument a list of strings, the command line options passed to your program.
 It is, however, ok to pass null to Gtk.init if commandline handling is not required. 
 
+.. literalinclude:: ../examples/simple_example.js
+    :lines: 4
+    :linenos:
+    :lineno-start: 4
 
 The next line creates an empty window.
 
@@ -133,3 +132,9 @@ Accordingly, the method :meth:`onButtonClicked` will be called if you click on t
     :lineno-start: 19
 
 The last block, outside of the class, is very similar to the simple example above, but instead of creating an instance of the generic :class:`Gtk.Window` class, we create an instance of :class:`MyWindow`.
+
+.. literalinclude:: ../examples/extended_example.js
+    :lines: 24-27
+    :linenos:
+    :lineno-start: 24
+
