@@ -71,7 +71,7 @@ Finally, we start the GTK+ processing loop which we quit when the window is clos
     :linenos:
     :lineno-start: 9
 
-You can now run the program by making it executable and running it 
+You can now run the program by making it executable and executing it directly
 
 .. code-block:: bash
 
