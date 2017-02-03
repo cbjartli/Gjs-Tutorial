@@ -14,7 +14,6 @@ Note that the appearance of the window will depend on your current GNOME theme.
 
 .. literalinclude:: ../examples/simple_example.js
     :linenos:
-    :language: javascript
 
 We will now explain each line of the example.
 
@@ -22,28 +21,16 @@ We will now explain each line of the example.
     :lines: 1
     :linenos:
     :lineno-start: 1
-    :language: javascript
 
 We start the program with a `shebang-directive <https://en.wikipedia.org/wiki/Shebang_(Unix)>`_, 
-which tells the operating system what interpreter to use to execute the file. This is strictly 
-speaking not necessary, but makes it possible to launch the program directly, just as with 
-native executables on the system. Most commonly, gjs should
-be available in /usr/bin/gjs, but this could be different for your system. If gjs
-is available in your path, you can run
-
-.. code-block:: bash
-
-    which gjs
-
-to find its precise location.
+which tells the operating system what interpreter to use to execute the file. \
 
 .. literalinclude:: ../examples/simple_example.js
     :lines: 3
     :linenos:
     :lineno-start: 3
-    :language: javascript
 
-We start by importing the Gtk library. This is done through Gjs' imports statement.
+In the beginning, we have to import the Gtk module to be able to access GTK+’s classes and functions.
 Gtk is one of the libraries that make use of GObject introspection, and is therefore 
 listed under the gi collection. 
 
@@ -51,47 +38,41 @@ listed under the gi collection.
     :lines: 4
     :linenos:
     :lineno-start: 4
-    :language: javascript
 
 After we have imported Gtk, we must initialize it. 
 The init function takes as its argument a list of strings, the command line options passed to your program.
-It is, however, ok to pass null to Gtk.init if commandline handling is not required. A failure to initialize
-the Gtk library can lead to your program terminating unexpectedly with a segmentation fault. 
+It is, however, ok to pass null to Gtk.init if commandline handling is not required. 
 
+
+The next line creates an empty window.
 
 .. literalinclude:: ../examples/simple_example.js
     :lines: 6
     :linenos:
     :lineno-start: 6
-    :language: javascript
 
-This statement creates an empty window. 
+Followed by connecting to the window’s delete event to ensure that the application is terminated if we click on the x to close the window.
 
 .. literalinclude:: ../examples/simple_example.js
     :lines: 7
     :linenos:
     :lineno-start: 7
-    :language: javascript
 
-Closing the window does not automatically terminate the application. 
-In order to do that, we connect to the window's delete event, and
-makes it run Gtk.main_quit to quit Gtk's event loop when the window is closed.
+In the next step we display the window.
 
 .. literalinclude:: ../examples/simple_example.js
     :lines: 8
     :linenos:
     :lineno-start: 8
-    :language: javascript
 
-We now display the window.
+Finally, we start the GTK+ processing loop which we quit when the window is closed.
 
 .. literalinclude:: ../examples/simple_example.js
     :lines: 9
     :linenos:
     :lineno-start: 9
-    :language: javascript
 
-Finally, we start the Gtk event loop. You can now run the program by making it executable and running it 
+You can now run the program by making it executable and running it 
 
 .. code-block:: bash
 
@@ -107,10 +88,9 @@ or by running it with gjs
 
 Extended Example 
 ----------------
-We now turn to something a bit more complex, the GUI version of the classic "Hello World" program. 
+For something a little more useful, here’s the Gjs version of the classic “Hello World” program.
 
 .. image :: ../images/extended_example.png
 
 .. literalinclude:: ../examples/extended_example.js 
     :linenos:
-    :language: javascript
