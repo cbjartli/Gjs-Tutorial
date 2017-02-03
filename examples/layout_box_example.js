@@ -10,7 +10,7 @@ const MyWindow = new Lang.Class({
     Extends: Gtk.Window,
 
     _init: function() {
-        this.parent({title:"Hello World"})
+        this.parent({title:"Hello World"});
 
         this.box = new Gtk.Box({spacing: 6});
         this.add(this.box);
@@ -25,11 +25,11 @@ const MyWindow = new Lang.Class({
     },
 
     onButton1Clicked: function(widget) {
-        print("Hello")
+        print("Hello");
     },
 
     onButton2Clicked: function(widget) {
-        print("Goodbye")
+        print("Goodbye");
     }
 });
 
