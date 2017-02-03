@@ -10,10 +10,10 @@ const MyWindow = new Lang.Class({
     Extends: Gtk.Window,
 
     _init: function() {
-        this.parent({title: "Hello World"})
-        this.button = new Gtk.Button({label: "Click here"})
-        this.button.connect("clicked", this.onButtonClicked)
-        this.add(this.button)
+        this.parent({title: "Hello World"});
+        this.button = new Gtk.Button({label: "Click here"});
+        this.button.connect("clicked", this.onButtonClicked);
+        this.add(this.button);
     },
 
     onButtonClicked: function() {
