@@ -27,6 +27,7 @@ detailed description of the API.
    :maxdepth: 2
    :caption: Contents:
     
+   install
    introduction
 
 Indices and tables

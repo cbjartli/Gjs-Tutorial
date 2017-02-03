@@ -1,0 +1,30 @@
+.. _install: 
+
+Installation
+============
+
+Gjs is a JavaScript engine based on Spidermonkey, which contains bindings to Gtk and other libraries that are used to create graphical user interfaces under GNOME. 
+The method by which Gjs communicates with these libraries is through APIs exposed by the GObject Introspection framework. 
+
+GNOME Shell is implemented in JavaScript 
+and run by Gjs, and Gjs therefore comes with any GNOME 3 installation. 
+Those who have GNOME 3 installed therefore will not need to install any additional packages. 
+Everyone else can get Gjs through their package managers.
+
+On Debian and derived distributions like Ubuntu: 
+
+.. code-block:: bash
+
+    apt-get install gjs libgjs-dev
+
+On Fedora
+
+.. code-block:: bash
+
+    dnf install gjs gjs-devel
+
+On Arch 
+
+.. code-block:: bash
+
+    pacman -S gjs 
