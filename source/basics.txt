@@ -8,7 +8,7 @@ This section will introduce some of the most important aspects of GTK+.
 
 .. _signals:
 
-Main loop and Signals
+Main Loop and Signals
 ---------------------
 Like most GUI toolkits, GTK+ uses an event-driven programming model.
 When the user is doing nothing, GTK+ sits in the main loop and waits for input.
