@@ -1,0 +1,68 @@
+.. _layout:
+
+Layout Containers
+=================
+While many GUI toolkits require you to precisely place widgets in a window,
+using absolute positioning, GTK+ uses a different approach.
+Rather than specifying the position and size of each widget in the window,
+you can arrange your widgets in rows, columns, and/or tables.
+The size of your window can be determined automatically, based on the sizes
+of the widgets it contains.
+And the sizes of the widgets are, in turn, determined by the amount of text
+they contain, or the minimum and maximum sizes that you specify, and/or how
+you have requested that the available space should be shared between sets of
+widgets. You can perfect your layout by specifying padding distance and
+centering values for each of your widgets. GTK+ then uses all this information
+to resize and reposition everything sensibly and smoothly when the user
+manipulates the window.
+
+GTK+ arranges widgets hierarchically, using *containers*.
+They are invisible to the end user and are inserted into a window, or placed
+within each other to layout components.
+There are two flavours of containers: single-child
+containers, which are all descendants of :class:`Gtk.Bin`, and multiple-child
+containers, which are descendants of :class:`Gtk.Container`.
+The most commonly used are vertical or horizontal boxes
+(:class:`Gtk.Box`) and grids (:class:`Gtk.Grid`).
+
+Boxes
+-----
+
+Boxes are invisible containers into which we can pack our widgets.
+When packing widgets into a horizontal box, the objects are inserted
+horizontally from left to right or right to left depending on whether
+:meth:`Gtk.Box.pack_start` or :meth:`Gtk.Box.pack_end` is used.
+In a vertical box, widgets are packed from top to bottom or vice versa.
+You may use any combination of boxes inside or beside other boxes to create
+the desired effect.
+
+Example
+^^^^^^^
+
+Let's take a look at a slightly modified version of the extended example with two
+buttons.
+
+.. image:: ../images/layout_box_example.png
+
+.. literalinclude:: ../examples/layout_box_example.js
+    :linenos:
+
+First, we create a horizontally orientated box container where 6 pixels are
+placed between children. This box becomes the child of the top-level window.
+
+.. literalinclude:: ../examples/layout_box_example.js
+    :lines: 15-16
+    :linenos:
+    :lineno-start: 15
+    :dedent: 8
+
+Subsequently, we add two different buttons to the box container.
+
+.. literalinclude:: ../examples/layout_box_example.js
+    :lines: 18-24
+    :linenos:
+    :lineno-start: 18
+    :dedent: 8
+
+While with :meth:`Gtk.Box.pack_start` widgets are positioned from left to right,
+:meth:`Gtk.Box.pack_end` positions them from right to left.

@@ -30,6 +30,7 @@ detailed description of the API.
    install
    introduction
    basics
+   layout
 
 Indices and tables
 ==================
