@@ -103,7 +103,8 @@ In order to do this, we import the lang library, which contains some convenience
     :linenos:
     :lineno-start: 4
 
-We can then define the class using Lang.Class
+We can then define the class using Lang.Class. Lang.Class is a convenience function for defining classes in JavaScript 
+adapted from `MooTools <https://mootools.net/>`_' implementation of classes. 
 
 .. literalinclude:: ../examples/extended_example.js
     :lines: 8, 22
