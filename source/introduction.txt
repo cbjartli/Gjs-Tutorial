@@ -35,8 +35,7 @@ listed under the gi collection.
     :lineno-start: 3
 
 After we have imported Gtk, we must initialize it. In the Gtk bindings for many other languages, 
-Gtk can be initialized with the commandline arguments passed to the program as a list of strings, 
-in order to modify the behavior of Gtk at runtime.
+Gtk can be initialized with a list of strings, the list of arguments that was passed to the program (argv).
 This does not work in Gjs yet. As of now, Gtk.init *must* be initialized with a ``null`` argument.
 
 .. literalinclude:: ../examples/simple_example.js
