@@ -34,9 +34,10 @@ listed under the gi collection.
     :linenos:
     :lineno-start: 3
 
-After we have imported Gtk, we must initialize it. 
-The init function takes as its argument a list of strings, the command line options passed to your program.
-It is, however, ok to pass null to Gtk.init if commandline handling is not required. 
+After we have imported Gtk, we must initialize it. In the Gtk bindings for many other languages, 
+Gtk can be initialized with the commandline arguments passed to the program as a list of strings, 
+in order to modify the behavior of Gtk at runtime.
+This does not work in Gjs yet. As of now, Gtk.init *must* be initialized with a ``null`` argument.
 
 .. literalinclude:: ../examples/simple_example.js
     :lines: 4
