@@ -31,7 +31,7 @@ const GridWindow = Lang.Class({
     }
 });
 
-win = new GridWindow();
+let win = new GridWindow();
 win.connect("delete-event", Gtk.main_quit);
 win.show_all();
 Gtk.main();
