@@ -40,7 +40,7 @@ const HeaderBarWindow = Lang.Class({
 
         this.add(new Gtk.TextView());
     }
-})
+});
 
 let win = new HeaderBarWindow();
 win.connect("delete-event", Gtk.main_quit);
