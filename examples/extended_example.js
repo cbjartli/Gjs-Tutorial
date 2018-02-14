@@ -15,9 +15,9 @@ class MyWindow extends Gtk.Window {
 
     static onButtonClicked() {
         print("Hello World");
-    }
-    
+    }   
 }
+GObject.registerClass(MyClass);
 
 let win = new MyWindow();
 win.connect("delete-event", Gtk.main_quit);
