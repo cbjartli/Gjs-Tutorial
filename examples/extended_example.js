@@ -5,21 +5,19 @@ const Lang = imports.lang;
 
 Gtk.init(null);
 
-const MyWindow = new Lang.Class({
-    Name: 'MyWindow',
-    Extends: Gtk.Window,
-
-    _init: function() {
-        this.parent({title: "Hello World"});
-        this.button = new Gtk.Button({label: "Click here"});
-        this.button.connect("clicked", this.onButtonClicked);
+class MyWindow extends Gtk.Window {
+    constructor() {
+        super({ title: "Hello World" });
+        this.button = new Gtk.Button({ label: "Click here" });
+        this.button.connect("clicked", MyWindow.onButtonClicked);
         this.add(this.button);
-    },
+    }
 
-    onButtonClicked: function() {
+    static onButtonClicked() {
         print("Hello World");
     }
-});
+    
+}
 
 let win = new MyWindow();
 win.connect("delete-event", Gtk.main_quit);
