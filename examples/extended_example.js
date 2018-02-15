@@ -1,7 +1,6 @@
 #!/usr/bin/gjs
 
 const Gtk = imports.gi.Gtk;
-const Lang = imports.lang;
 
 Gtk.init(null);
 
@@ -17,6 +16,7 @@ class MyWindow extends Gtk.Window {
         print("Hello World");
     }   
 }
+
 GObject.registerClass(MyClass);
 
 let win = new MyWindow();

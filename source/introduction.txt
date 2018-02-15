@@ -94,48 +94,40 @@ For something a little more useful, here’s the Gjs version of the classic “H
 .. literalinclude:: ../examples/extended_example.js 
     :linenos:
 
-This example differs from the simple example as we sub-class :class:`Gtk.Window` to define our own :class:`MyWindow` class.
+This example differs from the simple example as we extend :class:`Gtk.Window` to define our own :class:`MyWindow` class. This would formerly be done by using the imports.lang library, which contained conventience methods for defining classes in an object oriented javascript-style, similar to MooTools. With later versions of Gjs, however, ES6-style classes are supported, but they must be registered using the GObject.registerClass call.
 
-In order to do this, we import the lang library, which contains some convenience functions for writing object oriented javascript.
-
-.. literalinclude:: ../examples/extended_example.js
-    :lines: 4
-    :linenos:
-    :lineno-start: 4
-
-We can then define the class using Lang.Class. Lang.Class is a convenience function for defining classes in JavaScript 
-adapted from `MooTools <https://mootools.net/>`_' implementation of classes. 
+In the class’s constructor we have to call the constructor of the parent class, with an appropriate configuration object. In this case, we pass the title property, and set it to Hello World.
 
 .. literalinclude:: ../examples/extended_example.js
-    :lines: 8, 22
+    :lines: 9
     :linenos:
-    :lineno-start: 8
-
-In the class’s constructor we have to call the constructor of the parent class. In addition, we tell it to set the value of the property title to Hello World.
-
-.. literalinclude:: ../examples/extended_example.js
-    :lines: 13
-    :linenos:
-    :lineno-start: 13
+    :lineno-start: 9
 
 The next three lines are used to create a button widget, connect to its clicked signal and add it as child to the top-level window.
 
 .. literalinclude:: ../examples/extended_example.js
-    :lines: 14-16
+    :lines: 10-12
     :linenos:
-    :lineno-start: 14
+    :lineno-start: 10
 
 Accordingly, the method :meth:`onButtonClicked` will be called if you click on the button.
 
 .. literalinclude:: ../examples/extended_example.js
-    :lines: 19-21
+    :lines: 15-17
     :linenos:
-    :lineno-start: 19
+    :lineno-start: 15
 
-The last block, outside of the class, is very similar to the simple example above, but instead of creating an instance of the generic :class:`Gtk.Window` class, we create an instance of :class:`MyWindow`.
+Remember to register the class after its definition.
 
 .. literalinclude:: ../examples/extended_example.js
-    :lines: 24-27
+    :lines: 20
     :linenos:
-    :lineno-start: 24
+    :lineno-start: 20
+
+Instead of creating an instance of the generic :class:`Gtk.Window` class, we create an instance of :class:`MyWindow`.
+
+.. literalinclude:: ../examples/extended_example.js
+    :lines: 22-25
+    :linenos:
+    :lineno-start: 22
 
