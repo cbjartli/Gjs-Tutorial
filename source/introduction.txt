@@ -89,6 +89,8 @@ Extended Example
 ----------------
 For something a little more useful, here’s the Gjs version of the classic “Hello World” program.
 
+Attention: Old versions (like 1.46.0-1+b2 on Debian stable) of Gjs do not support classes, so the example does not work.
+
 .. image :: ../images/extended_example.png
 
 .. literalinclude:: ../examples/extended_example.js 
